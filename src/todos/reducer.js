@@ -3,7 +3,7 @@ import {
     REMOVE_TODO,
 } from './actions'
 
-export const todo = (state = [], action) => {
+export const todos = (state = [], action) => {
     const {type, payload} = action
 
     switch (type) {
@@ -18,7 +18,7 @@ export const todo = (state = [], action) => {
 
         case REMOVE_TODO: {
             const {text} = payload
-            return state.filer(todo => todo.text !== text)
+            return state.filter(todo => todo.text !== text)
         }
         
         default:
