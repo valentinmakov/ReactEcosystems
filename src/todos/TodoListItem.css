@@ -1,0 +1,33 @@
+.todo-item-container {
+    width: 90%;
+    border-radius: 10px;
+    border-width: 1px;
+    border-color: #000;
+    background-color: #FFF;
+    padding: 15px;
+}
+
+.buttons-container {
+    margin-top: 15px;
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+}
+
+.completed-button
+.remove-button {
+    width: 25%;
+    padding: 7px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.completed-button {
+    background-color: green;
+}
+
+.remove-button {
+    background-color: red;
+}
