@@ -10,8 +10,8 @@ export const removeTodo = text => ({
     payload: {text},
 })
 
-export const MARK_TODO_AS_READ = 'MARK_TODO_AS_READ'
-export const markTodoAsRead = text => ({
-    type: MARK_TODO_AS_READ,
+export const MARK_TODO_AS_COMPLETED = 'MARK_TODO_AS_COMPLETED'
+export const markTodoAsCompleted = text => ({
+    type: MARK_TODO_AS_COMPLETED,
     payload: {text},
 })

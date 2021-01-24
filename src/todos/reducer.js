@@ -1,7 +1,7 @@
 import {
     CREATE_TODO,
     REMOVE_TODO,
-    MARK_TODO_AS_READ,
+    MARK_TODO_AS_COMPLETED,
 } from './actions'
 
 export const todos = (state = [], action) => {
@@ -22,13 +22,10 @@ export const todos = (state = [], action) => {
             return state.filter(todo => todo.text !== text)
         }
 
-        case MARK_TODO_AS_READ: {
+        case MARK_TODO_AS_COMPLETED: {
             const {text} = payload
             return state.map(todo => todo.text === text
-                    ? {
-                        ...todo,
-                        isCompleted: true,
-                    }
+                    ? {...todo, isCompleted: true}
                     : todo
             )
         }
