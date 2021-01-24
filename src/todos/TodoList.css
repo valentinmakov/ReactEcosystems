@@ -1,0 +1,6 @@
+.list-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 60%;
+    background-color: #AAA;
+}
