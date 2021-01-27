@@ -6,7 +6,7 @@ import {
     markTodoAsCompleted,
     removeTodo,
 } from './actions'
-import {loadToto} from './thunks'
+import {loadTodo, removeTodoRequest} from './thunks'
 import './TodoList.css'
 
 const TodoList = ({todos = [], onRemovePressed, onCompletedPressed, startLoadingTodos, isLoading}) => {
@@ -35,8 +35,8 @@ const mapStateToProps = state => ({
 })
 
 const mapDispatchToProps = dispatch => ({
-    startLoadingTodos: () => dispatch(loadToto()),
-    onRemovePressed: text => dispatch(removeTodo(text)),
+    startLoadingTodos: () => dispatch(loadTodo()),
+    onRemovePressed: id => dispatch(removeTodoRequest(id)),
     onCompletedPressed: text => dispatch(markTodoAsCompleted(text)),
 })
 
