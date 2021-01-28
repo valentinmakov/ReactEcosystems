@@ -5,10 +5,10 @@ export const getIsLoading = state => state.todos.isLoading
 
 export const getIncompleteTodos = createSelector(
     getTodos,
-    todos => todos.filer(todo => !todo.isCompleted),
+    todos => todos.filter(todo => !todo.isCompleted),
 )
 
 export const getCompletedTodos = createSelector(
     getTodos,
-    todos => todos.filer(todo => todo.isCompleted),
+    todos => todos.filter(todo => todo.isCompleted),
 ) 
